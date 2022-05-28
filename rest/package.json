@@ -1,0 +1,28 @@
+{
+  "dependencies": {
+    "body-parser": "^1.20.0",
+    "dotenv": "^16.0.1",
+    "express": "^4.18.1",
+    "express-async-handler": "^1.2.0",
+    "mongoose": "^6.3.4",
+    "nodemon": "^2.0.16"
+  },
+  "name": "exercise-api",
+  "version": "1.0.0",
+  "main": "exercise-controller.mjs",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "nodemon exercise_controller.mjs"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/hobstowler/cs290-portfolio-rest.git"
+  },
+  "author": "Hobs Towler",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/hobstowler/cs290-portfolio-rest/issues"
+  },
+  "homepage": "https://github.com/hobstowler/cs290-portfolio-rest#readme",
+  "description": ""
+}

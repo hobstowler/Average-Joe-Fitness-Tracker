@@ -1,0 +1,50 @@
+###
+POST http://localhost:3000/exercises HTTP/1.1
+content-type: application/json
+
+{
+    "name": "Squat",
+    "reps": 10,
+    "weight": 30,
+    "unit": "lbs",
+    "date": "01-18-22"
+}
+
+###
+POST http://localhost:3000/exercises HTTP/1.1
+content-type: application/json
+
+{
+    "name": "Jumping Jacks",
+    "reps": 15,
+    "weight": 20,
+    "unit": "times",
+    "date": "01-21-22"
+}
+
+###
+POST http://localhost:3000/exercises HTTP/1.1
+content-type: application/json
+
+{
+    "name": "Plank",
+    "reps": 5,
+    "weight": 1,
+    "unit": "minute",
+    "date": "01-18-22"
+}
+
+###
+GET http://localhost:3000/exercises/628d12ea811df1ed660f5f14 HTTP/1.1
+
+###
+PUT http://localhost:3000/exercises/628d890421847ac6123abcfc  HTTP/1.1
+content-type: application/json
+
+{
+    "name": "Deeadlift",
+    "reps": 12,
+    "weight": 30,
+    "unit": "lbs",
+    "date": "01-25-22"
+}
