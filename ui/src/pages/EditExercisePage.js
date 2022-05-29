@@ -1,6 +1,6 @@
 import { useNavigate, useParams } from "react-router-dom"
 import { useState, useEffect } from 'react';
-import UnitSelect from "../components/unitSelector";
+import UnitSelect from "../components/UnitSelector";
 import Header from "../components/Header";
 import Footer from "../components/Footer";
 import Navigation from "../components/Navigation";
@@ -50,12 +50,12 @@ export const EditExercisePage = () => {
                 setSubText('Successfully saved. \n Redirecting...')
                 setTimeout(() => {
                     navigateHome()
-                }, 5000)
+                }, 3000)
             } else {
                 setSubText("Save Unsuccessful. \n Redirecting...")
                 setTimeout(() => {
                     navigateHome()
-                }, 5000)
+                }, 3000)
             }
         })
         .catch(error => console.log(error))

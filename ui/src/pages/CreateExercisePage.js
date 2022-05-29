@@ -2,7 +2,7 @@ import Header from "../components/Header"
 import Footer from "../components/Footer";
 import { useNavigate } from "react-router-dom"
 import { useState } from 'react';
-import UnitSelect from "../components/unitSelector";
+import UnitSelect from "../components/UnitSelector";
 import Navigation from "../components/Navigation";
 
 export const CreateExercisePage = () => {
@@ -32,12 +32,12 @@ export const CreateExercisePage = () => {
                 setSubText('Successfully created! \n Redirecting...')
                 setTimeout(() => {
                     navigateHome()
-                }, 5000)
+                }, 3000)
             } else {
                 setSubText("Create Unsuccessful. \n Redirecting...")
                 setTimeout(() => {
                     navigateHome()
-                }, 5000)
+                }, 3000)
             }
         })
         .catch(error => console.log(error))
@@ -64,7 +64,7 @@ export const CreateExercisePage = () => {
                     <div>Date: <input type='text' value={date} onChange={(e) => setDate(e.target.value)} /></div>
                     <div class='submitContainer'>
                         <div id="submitText">{subText}</div>
-                        <div><button type="submit">Submit</button></div>
+                        <div><button type="submit">Save</button></div>
                     </div>
                 </form>
             </div>
