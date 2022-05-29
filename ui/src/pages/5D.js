@@ -1,11 +1,11 @@
 import Header from "../components/Header"
 import Footer from "../components/Footer"
+import Navigation from "../components/Navigation";
 
 function FiveD() {
     
     return (
         <div>
-            <Header splashId={'splash4'} />
             <div className='bodyContainer'>
                 <div className="body">
                     <h1>If you can dodge a wrench...</h1>
@@ -21,7 +21,6 @@ function FiveD() {
                     </div>
                 </div>
             </div>
-            <Footer />
         </div>
     )
 }

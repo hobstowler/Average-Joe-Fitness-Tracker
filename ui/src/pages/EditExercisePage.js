@@ -3,6 +3,7 @@ import { useState, useEffect } from 'react';
 import UnitSelect from "../components/unitSelector";
 import Header from "../components/Header";
 import Footer from "../components/Footer";
+import Navigation from "../components/Navigation";
 
 export const EditExercisePage = () => {
     let { _id } = useParams()
@@ -66,38 +67,24 @@ export const EditExercisePage = () => {
     
     return (
         <div>
-            <Header splashId={'splash3'} />
-            <div className='bodyContainer'>
-                <div className='body'>
-                    <h1>Edit "{name}" Exercise:</h1>
-                    <p>Here's your chance to change up your tired old routine a little. 
-                        You should treat yourself more often. Maybe get a massage at the mall? 
-                        Do you really need to do {reps > 0 ? reps : 0} reps? 
-                        Maybe you could do {reps > 1 ? reps - 1 : 'nothing'} just for a little bit and see if you like that better.</p>
-                    <div className="edit">
-                        <form onSubmit={submitChanges}>
-                            <div>
-                                Name: <input type='text' value={name} onChange={(e) => setName(e.target.value)} />
-                            </div>
-                            <div>
-                                Reps: <input type='number' value={reps} onChange={(e) => setReps(parseInt(e.target.value))} />
-                            </div>
-                            <div>
-                                Weight: <input type='number' value={weight} onChange={(e) => setWeight(parseInt(e.target.value))} />
-                            </div>
-                            <UnitSelect unit={unit} setUnit={setUnit} />
-                            <div>
-                                Date: <input type='text' value={date} onChange={(e) => setDate(e.target.value)} />
-                            </div>
-                            <div class='submitContainer'>
-                                <div id="submitText">{subText}</div>
-                                <div><button type="submit">Submit</button></div>
-                            </div>
-                        </form>
+            <div className='body'>
+                <h1>Edit "{name}" Exercise:</h1>
+                <p>Here's your chance to change up your tired old routine a little.
+                    You should treat yourself more often. Maybe get a massage at the mall?
+                    Do you really need to do {reps > 0 ? reps : 0} reps?
+                    Maybe you could do {reps > 1 ? reps - 1 : 'nothing'} just for a little bit and see if you like that better.</p>
+                <form onSubmit={submitChanges}>
+                    <div>Name: <input type='text' value={name} onChange={(e) => setName(e.target.value)} /></div>
+                    <div>Reps: <input type='number' value={reps} onChange={(e) => setReps(parseInt(e.target.value))} /></div>
+                    <div>Weight: <input type='number' value={weight} onChange={(e) => setWeight(parseInt(e.target.value))} /></div>
+                    <UnitSelect unit={unit} setUnit={setUnit} />
+                    <div>Date: <input type='text' value={date} onChange={(e) => setDate(e.target.value)} /></div>
+                    <div class='submitContainer'>
+                        <div id="submitText">{subText}</div>
+                        <div><button type="submit">Submit</button></div>
                     </div>
-                </div>
+                </form>
             </div>
-            <Footer />
         </div>
     )
 }

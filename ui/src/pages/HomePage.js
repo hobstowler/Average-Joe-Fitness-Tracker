@@ -6,6 +6,7 @@ import { useNavigate } from 'react-router-dom';
 import Header from '../components/Header';
 import {FaPlus} from 'react-icons/fa'
 import Footer from '../components/Footer';
+import Navigation from "../components/Navigation";
 
 function HomePage() {
     const [exercises, setExercises] = useState([]);
@@ -48,18 +49,14 @@ function HomePage() {
 
     return (
         <div>
-            <Header splashId={'splash1'} />
-            <div className='bodyContainer'>
-                <div className='body'>
-                    <h1>Main Page</h1>
-                    <p>See all of your exercises on this page. Edit or delete them using the controls on the right side.</p>
-                    <ExerciseTable exercises={exercises} deleteExercise={deleteExercise} editExercise={editExercise} />
-                    <div className='createBottom'>
-                        <Link to='/create-exercise'><FaPlus /> Add Exercise</Link>
-                    </div>
+            <div className='body'>
+                <h1>Main Page</h1>
+                <p>See all of your exercises on this page. Edit or delete them using the controls on the right side.</p>
+                <ExerciseTable exercises={exercises} deleteExercise={deleteExercise} editExercise={editExercise} />
+                <div className='createBottom'>
+                    <Link to='/create-exercise'><FaPlus /> Add Exercise</Link>
                 </div>
             </div>
-            <Footer />
         </div>
     )
 }

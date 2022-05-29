@@ -1,10 +1,10 @@
 import logo from '../images/logo.png'
 import Navigation from './Navigation';
 
-function Header({splashId}) {
+function Header() {
 
     return (
-        <div className='headerest' id={splashId}>
+        <div className='headerest' id='splash1'>
             <div className='splash'></div>
             
             <div className='splashMid'>
@@ -15,7 +15,6 @@ function Header({splashId}) {
                     <div className='header'>
                         <div className='menu'>
                         <h1>Average Joe's Fitness Tracker</h1>
-                            <Navigation />
                             <p className='menuText'>A full stack MERN app you can dodge...</p>
                         </div>
                     </div>

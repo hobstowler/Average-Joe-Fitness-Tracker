@@ -3,6 +3,7 @@ import Footer from "../components/Footer";
 import { useNavigate } from "react-router-dom"
 import { useState } from 'react';
 import UnitSelect from "../components/unitSelector";
+import Navigation from "../components/Navigation";
 
 export const CreateExercisePage = () => {
     const [name, setName] = useState("")
@@ -48,39 +49,25 @@ export const CreateExercisePage = () => {
     
     return (
         <div>
-            <Header splashId={'splash2'} />
-            <div className='bodyContainer'>
-                <div className='body'>
-                    <h1>Create a New Exercise:</h1>
-                    <p>Here's something I'd never thought of before. 
-                        Truly, you're a genius for coming up with this new routine. 
-                        Really, we're all very impressed by this exercise you're creating here.
-                        Let's give it up for this dude over here creating {name ? name : "...something"}.
-                        </p>
-                    <div className="edit">
-                        <form onSubmit={submitChanges}>
-                            <div>
-                                Name: <input type='text' value={name} onChange={(e) => setName(e.target.value)} />
-                            </div>
-                            <div>
-                                Reps: <input type='number' value={reps} onChange={(e) => setReps(parseInt(e.target.value))} />
-                            </div>
-                            <div>
-                                Weight: <input type='number' value={weight} onChange={(e) => setWeight(parseInt(e.target.value))} />
-                            </div>
-                            <UnitSelect unit={unit} setUnit={setUnit} />
-                            <div>
-                                Date: <input type='text' value={date} onChange={(e) => setDate(e.target.value)} />
-                            </div>
-                            <div class='submitContainer'>
-                                <div id="submitText">{subText}</div>
-                                <div><button type="submit">Submit</button></div>
-                            </div>
-                        </form>
+            <div className='body'>
+                <h1>Create a New Exercise:</h1>
+                <p>Here's something I'd never thought of before.
+                    Truly, you're a genius for coming up with this new routine.
+                    Really, we're all very impressed by this exercise you're creating here.
+                    Let's give it up for this dude over here creating {name ? name : "...something"}.
+                    </p>
+                <form onSubmit={submitChanges}>
+                    <div>Name: <input type='text' value={name} onChange={(e) => setName(e.target.value)} /></div>
+                    <div>Reps: <input type='number' value={reps} onChange={(e) => setReps(parseInt(e.target.value))} /></div>
+                    <div>Weight: <input type='number' value={weight} onChange={(e) => setWeight(parseInt(e.target.value))} /></div>
+                    <UnitSelect unit={unit} setUnit={setUnit} />
+                    <div>Date: <input type='text' value={date} onChange={(e) => setDate(e.target.value)} /></div>
+                    <div class='submitContainer'>
+                        <div id="submitText">{subText}</div>
+                        <div><button type="submit">Submit</button></div>
                     </div>
-                </div>
+                </form>
             </div>
-            <Footer />
         </div>
     )
 }

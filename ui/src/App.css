@@ -6,6 +6,10 @@ body {
   padding: 0;
 }
 
+h1 {
+
+}
+
 tr th {
   border: none;
   color:#450805;
@@ -18,14 +22,11 @@ tr td {
   padding:1px;
 }
 
-div.edit {
+form {
+  font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
   width: 250px;
   margin: 0 auto;
   margin-top: 50px;
-}
-
-form {
-  font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
 }
 
 form div {
@@ -166,17 +167,23 @@ input, select {
   color: #450805;
 }
 
-.menu a {
+nav a {
   margin-left: 5px;
   padding-right: 5px;
   border-right: 2px solid #cd0704;
   color:#cd0704;
   text-decoration: none;
   font-weight: 500;
+  display: inline;
 }
 
-.menu nav {
-  display: inline;
+nav a:last-child {
+  border-right: none;
+}
+
+nav {
+  width:fit-content;
+  margin: 0 auto;
 }
 
 .menuText {
@@ -230,15 +237,9 @@ input, select {
   background-color: #ece6d1;
 }
 
-.bodyContainer {
-  height: 100%;
-  width: 100%;
-  margin: 0 auto;
-  margin-top: 50px;
-}
-
 .body {
   margin: 0 auto;
+  margin-top: 50px;
   border-radius: 15px;
   width:fit-content;
   height: fit-content;
