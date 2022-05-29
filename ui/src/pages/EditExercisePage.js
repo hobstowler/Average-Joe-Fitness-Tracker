@@ -46,12 +46,12 @@ export const EditExercisePage = () => {
         })
         .then(response => {
             if (response.status === 200) {
-                setSubText('Successfully saved.')
+                setSubText('Successfully saved. \n Redirecting...')
                 setTimeout(() => {
                     navigateHome()
                 }, 5000)
             } else {
-                setSubText("Save Unsuccessful.")
+                setSubText("Save Unsuccessful. \n Redirecting...")
                 setTimeout(() => {
                     navigateHome()
                 }, 5000)

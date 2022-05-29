@@ -28,12 +28,12 @@ export const CreateExercisePage = () => {
         })
         .then(response => {
             if (response.status === 201) {
-                setSubText('Successfully created!')
+                setSubText('Successfully created! \n Redirecting...')
                 setTimeout(() => {
                     navigateHome()
                 }, 5000)
             } else {
-                setSubText("Create Unsuccessful.")
+                setSubText("Create Unsuccessful. \n Redirecting...")
                 setTimeout(() => {
                     navigateHome()
                 }, 5000)
