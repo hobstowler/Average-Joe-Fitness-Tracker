@@ -17,7 +17,6 @@ function App() {
     <div className="App">
       <BrowserRouter>
         <Header />
-        <Navigation />
         <Routes>
           <Route path="/" element={<HomePage />} />
           <Route path="/edit-exercise/:_id" element={<EditExercisePage />} />

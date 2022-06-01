@@ -15,6 +15,7 @@ function Header() {
                     <div className='header'>
                         <div className='menu'>
                         <h1>Average Joe's Fitness Tracker</h1>
+                            <Navigation />
                             <p className='menuText'>A full stack MERN app you can dodge...</p>
                         </div>
                     </div>

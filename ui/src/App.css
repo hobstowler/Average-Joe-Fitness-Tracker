@@ -177,13 +177,15 @@ nav a {
   display: inline;
 }
 
+.menu p {
+  display: inline;
+}
+
 nav a:last-child {
-  border-right: none;
 }
 
 nav {
-  width:fit-content;
-  margin: 0 auto;
+  float:left;
 }
 
 .menuText {
